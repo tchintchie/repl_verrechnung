@@ -89,26 +89,26 @@ print()
 print("************************************************************************")
 print("Gesamtsumme je Monat je Report: ")
 
-vor_sum_infra = vor_infra_complete["Preis 2 (€)"].sum()
-neu_sum_infra = neu_infra_complete["Preis 2 (€)"].sum()
+vor_sum_infra = vor_infra_complete["Preis 1 (€)"].sum()
+neu_sum_infra = neu_infra_complete["Preis 1 (€)"].sum()
 print("************************************************************************")
 print()
 print()
-vor_sum_extern = vor_extern_complete["Preis 2 (€)"].sum()
-neu_sum_extern = neu_extern_complete["Preis 2 (€)"].sum()
+vor_sum_extern = vor_extern_complete["Preis 1 (€)"].sum()
+neu_sum_extern = neu_extern_complete["Preis 1 (€)"].sum()
 
 print("************************************************************************")
 print()
 print()
-vor_sum_intern = vor_intern_complete["Preis 2 (€)"].sum()
-neu_sum_intern = neu_intern_complete["Preis 2 (€)"].sum()
+vor_sum_intern = vor_intern_complete["Preis 1 (€)"].sum()
+neu_sum_intern = neu_intern_complete["Preis 1 (€)"].sum()
 
 print("Summe Infrastructure Vormonat: ", vor_sum_infra)
 print("Summe Infrastructure aktuell: ", neu_sum_infra)
 print("Summe Extern Vormonat: ", vor_sum_extern)
 print("Summe Extern aktuell: ", neu_sum_extern)
 print("Summe Intern Vorquartal: ", vor_sum_intern)
-print("Summe Extern aktuell: ", neu_sum_intern)
+print("Summe Intern aktuell: ", neu_sum_intern)
 
 print()
 print()
@@ -160,7 +160,7 @@ infra_vergleich.reset_index(inplace=True)
 fig, ax = plt.subplots(figsize=(15, 15))
 ax = sns.catplot(
     x="Profil",
-    y="Preis 2 (€)",
+    y="Preis 1 (€)",
     hue="Monat",
     data=infra_vergleich,
     height=8,
@@ -191,7 +191,7 @@ extern_vergleich.reset_index(inplace=True)
 fig, ax = plt.subplots(figsize=(15, 15))
 ax = sns.catplot(
     x="Profil",
-    y="Preis 2 (€)",
+    y="Preis 1 (€)",
     hue="Monat",
     data=extern_vergleich,
     height=8,
@@ -223,7 +223,7 @@ intern_vergleich.reset_index(inplace=True)
 fig, ax = plt.subplots(figsize=(15, 15))
 ax = sns.catplot(
     x="Profil",
-    y="Preis 2 (€)",
+    y="Preis 1 (€)",
     hue="Monat",
     data=intern_vergleich,
     height=8,
